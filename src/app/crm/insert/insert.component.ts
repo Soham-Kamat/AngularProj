@@ -9,14 +9,21 @@ import { CustomerService } from '../customer.service';
 })
 export class InsertComponent implements OnInit {
   
-  customer:any;
+  customer:any={
+    // "id":undefined,
+    // "name":undefined,
+    // "contactNo":undefined,
+    // "email":undefined
+  };
+
   constructor(private svc:CustomerService) { }
 
   ngOnInit(): void {
-    
   }
   insert(){
-    //this.svc.insert(this.customer);
+    console.log(this.customer)
+    this.svc.insert(this.customer);
+    console.log(this.svc.getAllData())
     alert("customer added");
   }
 

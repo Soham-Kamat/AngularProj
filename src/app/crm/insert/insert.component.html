@@ -1,25 +1,25 @@
-<form class="insert_form">
+<form class="insert_form" (ngSubmit)="insert()" name="insert_form">
     <div>
         <label  for="id">Enter Id:</label>
-        <input [ngModel]="[(customer.id)]" type="number" value="" placeholder="Enter Id" required>
+        <input [(ngModel)]="customer.id" type="number"name="id" placeholder="Enter Id" required>
     </div>
     
     <div>
         <label for="name">Enter Name:</label>
-        <input [ngModel]="[(customer.name)]" type="text" name="name" placeholder="Enter Name"  required>        
+        <input [(ngModel)]="customer.name" type="text" name="name" placeholder="Enter Name"  required>        
     </div>
     
     <div>
         <label for="contact">Contact Number:</label>
-        <input [ngModel]="[(customer.contactNo)]" type="text" name="contact" placeholder="Enter Contact Number" required>
+        <input [(ngModel)]="customer.contactNo" type="text" name="contact" placeholder="Enter Contact Number" required>
     </div>
 
    <div>
         <label for="email">Email Id: </label>
-        <input [ngModel]="[(customer.email)]" type="email" placeholder="Enter Email Id">
+        <input [(ngModel)]="customer.email" type="email" name="email" placeholder="Enter Email Id" required>
    </div>
    <div>
-    <input type="submit"  value="Insert">
+    <button [routerLink]="['/customers']" type="button" (click)="insert()" name="submit" >Insert</button>
    </div>
    
 </form>

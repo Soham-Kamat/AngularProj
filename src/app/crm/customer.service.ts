@@ -33,6 +33,7 @@ export class CustomerService {
   }
   public insert(customer:any):any{
     this.customers.push(customer)
+    console.log(customer)
   }
   public getById (id:number){
     this.found=this.customers.find(customer=>(customer.id==id));
