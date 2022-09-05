@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{product.imageUrl}}" class="card-img-top" style="width: 18rem;height: 15rem;" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">UnitPrice: {{product.unitPrice}}</li>
+      <li class="list-group-item">Likes:{{product.likes}}</li>
+    </ul>
+    <app-counter style="padding-left: 10px"
+    [count]="product.likes"
+    (update)="onUpdate($event)"></app-counter> <!--- Event Binding here -->
+  </div>
+
+

@@ -1,0 +1,12 @@
+<div *ngIf="status" class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><b>Name:</b> {{customer.name}} <b>Id:</b> {{customer.id}}</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Contact Number</h5>
+    <p class="card-text text-secondary">{{customer.contactNo}}</p>
+    <h5 class="card-title">Email Id</h5>
+    <p class="card-text text-secondary">{{customer.email}}</p>
+  </div>
+</div>
+
+<button [routerLink]="['/customers']" (click)="deleteMyData()" >Delete My Profile</button>
+<button (click)="updateProf()">Update My Profile</button>

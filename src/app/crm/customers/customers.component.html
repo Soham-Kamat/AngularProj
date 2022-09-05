@@ -1,0 +1,14 @@
+
+<button (click)="onShow()">Show List</button>
+<button (click)="onHide()">Hide List</button>
+<!-- <input type="checkbox" name="Show List" (Oonse)="onShow()" value="Show List"> -->
+<div *ngIf="status">
+    <ol>
+       <li *ngFor="let c of customer"> 
+        <a [routerLink]="['/customers',c.id]" (click)="showDetails()"  >{{c.name}}</a>
+       </li>
+    </ol>
+    <a [routerLink]="['/insert']">Add new Customer</a>
+</div>
+
+

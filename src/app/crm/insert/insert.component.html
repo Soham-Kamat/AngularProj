@@ -1,0 +1,25 @@
+<form class="insert_form">
+    <div>
+        <label  for="id">Enter Id:</label>
+        <input [ngModel]="[(customer.id)]" type="number" value="" placeholder="Enter Id" required>
+    </div>
+    
+    <div>
+        <label for="name">Enter Name:</label>
+        <input [ngModel]="[(customer.name)]" type="text" name="name" placeholder="Enter Name"  required>        
+    </div>
+    
+    <div>
+        <label for="contact">Contact Number:</label>
+        <input [ngModel]="[(customer.contactNo)]" type="text" name="contact" placeholder="Enter Contact Number" required>
+    </div>
+
+   <div>
+        <label for="email">Email Id: </label>
+        <input [ngModel]="[(customer.email)]" type="email" placeholder="Enter Email Id">
+   </div>
+   <div>
+    <input type="submit"  value="Insert">
+   </div>
+   
+</form>

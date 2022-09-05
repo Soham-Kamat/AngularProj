@@ -1,0 +1,21 @@
+<form action="">
+    <h4><u>Update My Profile</u> </h4>
+    <div class="">
+        <label >Name</label>
+        <input [(ngModel)]="customer.name" type="text" name="name"  value="{{customer.name}}">    
+    </div>
+    <div>
+        <label>Contact Number</label>
+        <input [(ngModel)]="customer.contactNo" type="text" value="{{customer.contactNo}}" name="contactNo">    
+    </div>
+    <div>
+        <label>Email Id</label>
+        <input [(ngModel)]="customer.email"  type="email" name="emailId" size="32" value="{{customer.email}} ">    
+    </div>
+    
+    <button [routerLink]="['/customers']" (click)="updateProfile()">Update</button>
+    
+</form>
+
+
+
